@@ -1,5 +1,6 @@
 function WebApplet_PreInvokeMethod (MethodName) 
 { 
+//Sandeep added code for import the execl sheet data to SIebel DB
 if (MethodName == "ImportRecords") 
 { 
 var i =2; 
