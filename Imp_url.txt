@@ -1,0 +1,8 @@
+http://fiddle.jshell.net/dford/f1foLs2c/light/?prpm=PR&object=DesktopForm&name=BeautifulThing&userprops=&comments=Yes&logging=No
+
+
+https://duncanford.github.io/prpm-code-generator/?prpm=PR&object=DesktopForm&name=BeautifulThing&userprops=&comments=Yes&logging=No
+
+https://docs.oracle.com/cd/E14004_01/books/config_open_ui/appendix_a_API5.html
+
+https://docs.oracle.com/cd/E63029_01/books/ConfigOpenUI/customizing_example002.htm

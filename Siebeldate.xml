@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:output method="xml" version="1.0" indent="yes"/>
+	<xsl:template match="/|@*|node()">
+		
+		<xsl:choose>
+			<!-- Date format for Service Orders and Assets-->
+			<xsl:when test="name()='ACSStartDate'">
+				<xsl:element name="ACSStartDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='StartDate'">
+				<xsl:element name="StartDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+
+			<xsl:when test="name()='ACSEndDate'">
+				<xsl:element name="ACSEndDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<!-- Date format for Account/Customer -->
+			<xsl:when test="name()='AccountStatusDate'">
+				<xsl:element name="AccountStatusDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='AdjustmentDate'">
+				<xsl:element name="AdjustmentDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='ExchangeDate'">
+				<xsl:element name="ExchangeDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='PaymentDate'">
+				<xsl:element name="PaymentDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='ReFillDate'">
+				<xsl:element name="ReFillDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='EndDate'">
+				<xsl:element name="EndDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='Created'">
+				<xsl:element name="Created">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='Updated'">
+				<xsl:element name="Updated">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='CreditCardExpirationDate'">
+				<xsl:element name="CreditCardExpirationDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='DesiredPaymentDate'">
+				<xsl:element name="DesiredPaymentDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='ReceivedDate'">
+				<xsl:element name="ReceivedDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='BillingEndDate'">
+				<xsl:element name="BillingEndDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='BillingStartDate'">
+				<xsl:element name="BillingStartDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='InvoiceDate'">
+				<xsl:element name="InvoiceDate">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:when test="name()='CustomerSince'">
+				<xsl:element name="CustomerSince">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+<xsl:when test="name()='Created_Date'">
+				<xsl:element name="Created_Date">
+					<xsl:call-template name="SiebelDateToNTDate">
+				 		<xsl:with-param name="date">
+				 			<xsl:value-of select="."/>
+				 		</xsl:with-param>
+					</xsl:call-template>
+		  		</xsl:element>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:copy>
+					<xsl:apply-templates select="@*|node()"/> 
+				</xsl:copy>
+				
+			</xsl:otherwise>
+		</xsl:choose>
+		
+		</xsl:template>
+		<xsl:template name="SiebelDateToNTDate">
+			<xsl:param name="date"/>
+			<xsl:if test="$date !=''">
+				<xsl:value-of select="substring($date, 4, 2)"/>/<xsl:value-of select="substring($date, 1, 2)"/>/<xsl:value-of select="substring($date, 7, 4)"/><xsl:value-of select="substring($date, 11, 9)"/>
+			</xsl:if>
+		</xsl:template>
+</xsl:stylesheet>
