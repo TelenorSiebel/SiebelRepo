@@ -1,0 +1,60 @@
+The account PASSWORD is “ch@ngeM3”.  You will be prompted to change your password the first time you log into the Azure management portal.
+
+sandeepa.kabbinamane@acnazure110hotmail.onmicrosoft.com
+
+
+https://sandeepakc@gowdakc.scm.azurewebsites.net:443/gowdakc.git
+
+
+Greetings all Cloud-PaaS Academy participants!
+
+This email is sent to serve as a cheat-sheet and reminder of the things explained in the kickoff video (module #1).
+
+•	Watch the kickoff video. https://go.accenture.com/paaskickoff
+
+•	Create a Cloud9 account. http://c9.io
+
+•	Create a Heroku account. https://www.heroku.com/
+
+•	Create a Pivotal Web Services account. http://run.pivotal.io/
+
+•	Create an IBM Bluemix account. https://ace.ng.bluemix.net/     
+
+•	Ask questions in the circle. https://go.accenture.com/PAASACADEMYCIRCLE
+
+•	The course content (modules and activities). https://go.accenture.com/PAASACADEMYCONTENT
+                                                                                                                                                                                                                            
+•	After you complete each activity, log the links in the activity log. https://go.accenture.com/PAASACADEMYLOG
+
+•	Do the assessment.
+
+
+Azure
+
+http://gowdakc.azurewebsites.net/
+
+
+ssh dockerlab@dockeracademy16.cloudapp.net
+
+http://dockeracademy25.eastus2.cloudapp.azure.com/
+
+dockeracademy25.eastus2.cloudapp.azure.com
+
+http://dockeracademy25.eastus2.cloudapp.azure.com/
+http://dockeracademy25.eastus2.cloudapp.azure.com:8080/
+
+http://dockeracademy25.eastus2.cloudapp.azure.com:8080/
+
+curl -L https://github.com/docker/compose/releases/download/1.16.0/docker-compose-'uname -s`-`uname -m` > /usr/local/bin/docker-compose
+
+curl _L https://github.com/docker/compose/releases/download/1.16.0/docker-compose-'uname -s'-'uname -m' > /user/local/bin/docker-compose
+
+curl -L https://github.com/docker/compose/releases/download/1.16.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+
+wsk property set --apihost openwhisk.ng.bluemix.net --auth 72692091-c925-41a9-8d7c-3898d6777e3b:8A5kL5ljUDFIL7jSkvRZPr9ikNuZnfVq2332o9VxpwCpQ2dtMhDyVcWgfvHbohTO
+
+https://openwhisk.ng.bluemix.net/api/v1/web/GowdaOrg_Dev/default/weather_activity-dev-weather
+
+
+
+The password for all VMs is “PaaS2017”.  Don’t forget to log the URL for your application in the shared spreadsheet.  Once we’ve verified your application is deployed, we will retire your VM.
