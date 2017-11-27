@@ -1,0 +1,50 @@
+function WebApplet_PreInvokeMethod (MethodName) 
+{ 
+if (MethodName == "ImportRecords") 
+{ 
+var i =2; 
+var ExcelApp = COMCreateObject("Excel.Application"); 
+ExcelApp.Workbooks.Open("C:\\***\\***\\Desktop\\LoadTest.xlsx"); 
+ExcelApp.Visible = false; 
+var oBOLdVal = TheApplication().GetBusObject("Admin Product Definition"); 
+var oBCLdVal = oBOLdVal.GetBusComp("Internal Product"); 
+
+while(ExcelApp.ActiveSheet.Cells(i,1).Value!= null) 
+{ 
+var Code = ExcelApp.ActiveSheet.Cells(i,1).Value; 
+var AliasName = ExcelApp.ActiveSheet.Cells(i,2).Value; 
+var Description = ExcelApp.ActiveSheet.Cells(i,3).Value; 
+var PartNo = ExcelApp.ActiveSheet.Cells(i,4).Value; 
+var Product = ExcelApp.ActiveSheet.Cells(i,5).Value; 
+
+with(oBCLdVal) 
+{ 
+ActivateField("Name"); 
+ActivateField("Alias Name"); 
+ActivateField("Description"); 
+ActivateField("Part #"); 
+ActivateField("Parent Internal Product"); 
+ClearToQuery(); 
+//ExecuteQuery(); 
+InvokeMethod("SetAdminMode","TRUE"); 
+NewRecord(NewAfter); 
+SetFieldValue("Alias Name",AliasName); 
+SetFieldValue("Name",Code); 
+SetFieldValue("Description",Description); 
+SetFieldValue("Part #",PartNo); 
+SetFieldValue("Parent Internal Product",Product); 
+SetFieldValue("Version Status","Active"); 
+WriteRecord(); 
+
+} 
+i=i+1; 
+} 
+ExcelApp.Quit(); 
+ExcelApp = null; 
+oBOLdVal = null; 
+oBCLdVal = null; 
+TheApplication().RaiseErrorText("Load Success"); 
+return(CancelOperation); 
+} 
+return(ContinueOperation); 
+}
