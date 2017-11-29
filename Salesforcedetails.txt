@@ -1,0 +1,48 @@
+PGAddClass PG = new PGAddClass();
+PG.sum();
+
+My_PG__c c= new My_PG__c();
+c.PG_Name__c = 'PG-KC';
+c.PG_Email_Address__c ='pgkc@in.com';
+c.PG_Phone_Number__c ='(345) 678 9765';
+INSERT c;
+system.debug('My PG New Inserted Record Is :'+ c.Id);
+
+list<My_PG__c> pg = [SELECT Id,PG_Name__c,PG_Email_Address__c,PG_Phone_Number__c from My_PG__c];
+system.debug('Rcord)
+system.debug('Rcord)
+
+00:23:53:012 USER_DEBUG [3]|DEBUG|PG Records:
+(My_PG__c:{Id=a017F00000BF9WvQAL, PG_Name__c=AA PG, PG_Email_Address__c=sandeep.sharath@gmail.com, PG_Phone_Number__c=(567) 890-7545}, 
+My_PG__c:{Id=a017F00000BF9X0QAL, PG_Name__c=BB PG, PG_Email_Address__c=bb@in.com, PG_Phone_Number__c=(665) 432-1356}, 
+My_PG__c:{Id=a017F00000BF9XwQAL, PG_Name__c=ABC, PG_Email_Address__c=abc@in.com, PG_Phone_Number__c=(998) 876-5456}, 
+My_PG__c:{Id=a017F00000BFCCXQA5, PG_Name__c=MY PG, PG_Email_Address__c=sandy1989@my.com, PG_Phone_Number__c=(456) 789-0334}, 
+My_PG__c:{Id=a017F00000BF9V6QAL, PG_Name__c=KK PG, PG_Email_Address__c=kk@in.com, PG_Phone_Number__c=(345) 678-9234},
+ My_PG__c:{Id=a017F00000BFKgyQAH, PG_Name__c=PG-KC, PG_Email_Address__c=pgkc@in.com, PG_Phone_Number__c=(345) 678 9765},
+ My_PG__c:{Id=a017F00000BFKgjQAH, PG_Name__c=PLUS, PG_Email_Address__c=plus@in.com, PG_Phone_Number__c=(345) 678 9765}, 
+ My_PG__c:{Id=a017F00000BF9V1QAL, PG_Name__c=KC PG, PG_Email_Address__c=kc@in.com, PG_Phone_Number__c=(873) 435-3535})
+ 
+ 
+ list<My_PG__c> pg = [SELECT Id,PG_Name__c,PG_Email_Address__c,PG_Phone_Number__c from My_PG__c];
+system.debug('PG Record Count:'+pg.size());
+//system.debug('PG Records:'+ pg);
+
+for(My_PG__c c:pg)
+{
+ system.debug('PG Name:'+ c.PG_Name__c +'PG Email:'+ c.PG_Email_Address__c);   
+}
+
+
+01:36:08:016 USER_DEBUG [4]|DEBUG|Result :{0017F00000KP2ygQAD=Account:
+{Id=0017F00000KP2ygQAD, Name=Edge Communications}, 
+0017F00000KP2yhQAD=Account:{Id=0017F00000KP2yhQAD, Name=Burlington Textiles Corp of America}, 
+0017F00000KP2yiQAD=Account:{Id=0017F00000KP2yiQAD, Name=Pyramid Construction Inc.}, 
+0017F00000KP2yjQAD=Account:{Id=0017F00000KP2yjQAD, Name=Dickenson plc}, 
+0017F00000KP2ykQAD=Account:{Id=0017F00000KP2ykQAD, Name=Grand Hotels & Resorts Ltd}, 
+0017F00000KP2ylQAD=Account:{Id=0017F00000KP2ylQAD, Name=United Oil & Gas Corp.}, 
+0017F00000KP2ymQAD=Account:{Id=0017F00000KP2ymQAD, Name=Express Logistics and Transport}, 
+0017F00000KP2ynQAD=Account:{Id=0017F00000KP2ynQAD, Name=University of Arizona}, 
+0017F00000KP2yoQAD=Account:{Id=0017F00000KP2yoQAD, Name=United Oil & Gas, UK}, 
+0017F00000KP2ypQAD=Account:{Id=0017F00000KP2ypQAD, Name=United Oil & Gas, Singapore}, ...}
+
+

@@ -1,0 +1,57 @@
+https://www.youtube.com/watch?v=Lxd6JMMxuwo
+http://localhost:8080/login?from=%2F
+
+Folder Creation in c Drive
+
+Right click Git Bash here
+
+Git Init
+
+git remote add origin "https://github.com/TelenorSiebel/SiebelRepo.git"
+
+
+Git pull origin master
+
+Git status
+
+git add filename
+
+git status
+git commit -m "comments"
+
+git add -A  --for add all the modifed and new filename
+
+git commit -a -m
+
+Branchs
+
+git branch Siebel1
+
+git checkout Siebel1
+
+git add -A
+
+Git commit -a -m ""
+
+ls
+
+git checkout master
+ls
+
+cat file name to show the details modified
+
+git rebase Siebel1--branch name 
+
+ssh-keygen --Genrate sSH key and update that key in git hub 
+
+then connect the SSH --$ cat  /c/Users/sandeepa.kabbinamane/.ssh/id_rsa.pub
+
+if you want to push branch then git push origin SIebel1 --Branch name
+
+git push origin master
+
+done
+
+
+
+
